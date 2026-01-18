@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pos-container">
+      <header class="header">
+        <div class="logo-container">
+          <span class="letter p">P</span>
+          <span class="letter o">O</span>
+          <span class="letter s">S</span>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search product or any order..." />
+        </div>
+        <div class="header-right">
+          <div class="date-time">
+            <i class="icon-calendar"></i>
+            <span id="calendar-emoji" onclick="toggleCalendar()">🗓️</span>
+            October 18th 2002, 10:00AM
+            <input type="date" id="calendar-popup" />
+          </div>
+          <button class="add-table-btn">
+            <span class="plus-icon">+</span> ADD TABLE
+          </button>
+        </div>
+      </header>
+
+      <main class="menu-grid">
+        <!-- Row 1 -->
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p1.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge brown">N</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p2.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>FRENCH FRIES</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p3.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>SUMMER SALAD</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge brown">N</span>
+              <span class="spicy-icons">🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p3.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>SUMMER SALAD</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge light">0%</span>
+              <span class="spicy-icons">🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2 -->
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p4.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p5.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p6.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p6.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 3 -->
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p4.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p5.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p6.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-image">
+            <img class="card-image-food" src="IMG/p6.jpg" />
+          </div>
+          <div class="card-info">
+            <h3>CHICKEN WINGS</h3>
+            <div class="card-footer">
+              <span class="category-label">CATEGORY:</span>
+              <span class="badge orange">G</span>
+              <span class="spicy-icons">🌶️🌶️</span>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <footer class="bottom-nav">
+        <button class="nav-item active">STARTER</button>
+        <button class="nav-item">MAIN COURSE</button>
+        <button class="nav-item">DRINKS</button>
+        <button class="nav-item">DESSERTS</button>
+      </footer>
+    </div>
+    <script>
+      function toggleCalendar() {
+        const calendar = document.getElementById("calendar-popup");
+        if (
+          calendar.style.display === "none" ||
+          calendar.style.display === ""
+        ) {
+          calendar.style.display = "block";
+          // Add event listener to close when clicking outside
+          document.addEventListener("click", closeCalendarOnOutsideClick);
+        } else {
+          calendar.style.display = "none";
+          document.removeEventListener("click", closeCalendarOnOutsideClick);
+        }
+      }
+
+      function closeCalendarOnOutsideClick(event) {
+        const calendar = document.getElementById("calendar-popup");
+        const emoji = document.getElementById("calendar-emoji");
+        if (!calendar.contains(event.target) && !emoji.contains(event.target)) {
+          calendar.style.display = "none";
+          document.removeEventListener("click", closeCalendarOnOutsideClick);
+        }
+      }
+    </script>
+  </body>
+</html>
