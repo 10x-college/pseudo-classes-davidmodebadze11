@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +19,10 @@
         </div>
         <div class="header-right">
           <div class="date-time">
-            <i class="icon-calendar"></i> 🗓️ October 18th 2002, 10:00AM
+            <i class="icon-calendar"></i>
+            <span id="calendar-emoji" onclick="toggleCalendar()">🗓️</span>
+            October 18th 2002, 10:00AM
+            <input type="date" id="calendar-popup" />
           </div>
           <button class="add-table-btn">
             <span class="plus-icon">+</span> ADD TABLE
@@ -206,5 +209,30 @@
         <button class="nav-item">DESSERTS</button>
       </footer>
     </div>
+    <script>
+      function toggleCalendar() {
+        const calendar = document.getElementById("calendar-popup");
+        if (
+          calendar.style.display === "none" ||
+          calendar.style.display === ""
+        ) {
+          calendar.style.display = "block";
+          // Add event listener to close when clicking outside
+          document.addEventListener("click", closeCalendarOnOutsideClick);
+        } else {
+          calendar.style.display = "none";
+          document.removeEventListener("click", closeCalendarOnOutsideClick);
+        }
+      }
+
+      function closeCalendarOnOutsideClick(event) {
+        const calendar = document.getElementById("calendar-popup");
+        const emoji = document.getElementById("calendar-emoji");
+        if (!calendar.contains(event.target) && !emoji.contains(event.target)) {
+          calendar.style.display = "none";
+          document.removeEventListener("click", closeCalendarOnOutsideClick);
+        }
+      }
+    </script>
   </body>
 </html>

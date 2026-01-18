@@ -95,6 +95,7 @@ body {
   font-size: 14px;
   color: #444;
   font-weight: 500;
+  position: relative;
 }
 
 .add-table-btn {
@@ -124,8 +125,25 @@ body {
   background-color: var(--card-bg);
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.2s;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Dim other cards when one is hovered */
+.menu-grid:has(.food-card:hover) .food-card:not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.95);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .card-image {
@@ -244,4 +262,21 @@ body {
     min-width: 120px;
     padding: 10px 20px;
   }
+}
+
+/* Calendar Popup Styles */
+#calendar-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  z-index: 10;
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-blue);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text-main);
 }
